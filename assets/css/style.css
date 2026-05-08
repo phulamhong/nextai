@@ -272,6 +272,21 @@ a:hover {
   border-color: var(--text-muted);
 }
 
+.btn-disabled {
+  background: var(--bg-soft);
+  color: var(--text-soft);
+  border-color: var(--border);
+  cursor: not-allowed;
+  user-select: none;
+}
+
+.btn-disabled:hover {
+  background: var(--bg-soft);
+  color: var(--text-soft);
+  transform: none;
+  box-shadow: none;
+}
+
 /* ─────────── SECTION COMMON ─────────── */
 .section {
   padding: 96px 0;
