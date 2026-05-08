@@ -1,0 +1,16 @@
+title: NextAI — Ứng dụng AI cho người Việt
+description: NextAI phát triển ứng dụng AI giải quyết các vấn đề pháp lý + kế toán cho doanh nghiệp nhỏ Việt Nam. Sản phẩm hiện có HKD Pro, sắp ra mắt VNLaw và LuatGT.
+url: https://phulamhong.github.io
+baseurl: /nextai
+
+# Static HTML page — Jekyll chỉ deploy file, không build markdown
+# (index.html đã được render sẵn)
+
+# Loại file Jekyll bỏ qua khi deploy
+exclude:
+  - README.md
+  - .gitignore
+  - LICENSE
+
+# SEO
+google_site_verification: ""  # paste verification token nếu submit Google Search Console
