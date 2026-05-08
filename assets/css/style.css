@@ -376,6 +376,8 @@ a:hover {
 .icon-red    { background: #fef2f2; }
 .icon-blue   { background: #eff6ff; }
 .icon-amber  { background: #fffbeb; }
+.icon-green  { background: #ecfdf5; }
+.icon-purple { background: #f5f3ff; }
 
 .status {
   font-size: 11px;
@@ -393,6 +395,11 @@ a:hover {
 .status-soon {
   background: #fef3c7;
   color: #92400e;
+}
+
+.status-future {
+  background: #e0e7ff;
+  color: #3730a3;
 }
 
 .product-card h3 {
@@ -426,6 +433,240 @@ a:hover {
 
 .card-cta.muted {
   color: var(--text-soft);
+}
+
+/* ─────────── FEATURED CARD (HKD Pro hero card) ─────────── */
+.featured-card {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 0;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all 0.2s ease;
+  color: var(--text);
+  box-shadow: 0 0 0 1px var(--primary), var(--shadow-md);
+}
+
+.featured-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 0 1px var(--primary), var(--shadow-lg);
+  color: var(--text);
+}
+
+.featured-card-left {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.featured-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  background: #fef2f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  margin-bottom: 4px;
+}
+
+.featured-card-left .status-live {
+  align-self: flex-start;
+}
+
+.featured-card-left h3 {
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-top: 4px;
+}
+
+.featured-card-left p {
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.featured-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.tag {
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px 10px;
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  border-radius: 999px;
+}
+
+.featured-card .card-cta {
+  margin-top: 8px;
+}
+
+.featured-card-right {
+  background: linear-gradient(135deg, #fafbff 0%, #f1f5ff 100%);
+  padding: 40px;
+  border-left: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 18px;
+}
+
+.stat-row {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  padding-bottom: 14px;
+  border-bottom: 1px dashed var(--border);
+}
+
+.stat-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.stat-row strong {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--primary);
+  letter-spacing: -0.02em;
+  min-width: 56px;
+}
+
+.stat-row span {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+@media (max-width: 800px) {
+  .featured-card { grid-template-columns: 1fr; }
+  .featured-card-right { border-left: none; border-top: 1px solid var(--border); }
+  .featured-card-left { padding: 28px; }
+  .featured-card-right { padding: 28px; }
+  .featured-card-left h3 { font-size: 26px; }
+}
+
+/* ─────────── SUITE GRID (4 coming-soon apps) ─────────── */
+.suite-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 1024px) { .suite-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 540px)  { .suite-grid { grid-template-columns: 1fr; } }
+
+.suite-card {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: all 0.2s ease;
+}
+
+.suite-card:hover {
+  border-color: var(--text-muted);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.suite-card .card-top {
+  margin-bottom: 16px;
+}
+
+.suite-card .product-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  font-size: 22px;
+}
+
+.suite-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-bottom: 8px;
+}
+
+.suite-card .card-desc {
+  font-size: 13px;
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+
+.suite-card .card-meta {
+  font-size: 11px;
+  margin-bottom: 0;
+  padding-top: 12px;
+}
+
+/* ─────────── NEXTAI LAB ─────────── */
+.section-lab {
+  background: linear-gradient(180deg, #ffffff 0%, #fafbff 100%);
+}
+
+.lab-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+@media (max-width: 900px) { .lab-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .lab-grid { grid-template-columns: 1fr; } }
+
+.lab-card {
+  background: white;
+  border: 1px dashed var(--border);
+  border-radius: var(--radius);
+  padding: 24px 20px;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.lab-card:hover {
+  border-style: solid;
+  border-color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.lab-icon {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.lab-card h4 {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  letter-spacing: -0.01em;
+}
+
+.lab-card p {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.lab-cta {
+  text-align: center;
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-top: 8px;
 }
 
 /* ─────────── HKD PRO DETAIL ─────────── */
@@ -740,6 +981,13 @@ a:hover {
 
 .footer-col a:hover {
   color: white;
+}
+
+.footer-col a .muted {
+  color: var(--text-soft);
+  font-size: 11px;
+  margin-left: 4px;
+  opacity: 0.7;
 }
 
 .footer-bottom {
