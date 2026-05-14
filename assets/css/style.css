@@ -388,11 +388,7 @@ a:hover {
   font-size: 28px;
 }
 
-.icon-red    { background: #fef2f2; }
-.icon-blue   { background: #eff6ff; }
-.icon-amber  { background: #fffbeb; }
-.icon-green  { background: #ecfdf5; }
-.icon-purple { background: #f5f3ff; }
+.icon-red, .icon-blue, .icon-amber, .icon-green, .icon-purple { background: none; }
 
 .status {
   font-size: 11px;
@@ -480,12 +476,9 @@ a:hover {
 .featured-icon {
   width: 64px;
   height: 64px;
-  border-radius: 16px;
-  background: #fef2f2;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 32px;
   margin-bottom: 4px;
 }
 
@@ -660,8 +653,9 @@ a:hover {
 }
 
 .lab-icon {
-  font-size: 36px;
   margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
 }
 
 .lab-card h4 {
