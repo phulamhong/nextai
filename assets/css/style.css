@@ -704,7 +704,6 @@ a:hover {
 }
 
 .feature-icon {
-  font-size: 28px;
   margin-bottom: 12px;
 }
 
@@ -905,8 +904,9 @@ a:hover {
 }
 
 .contact-icon {
-  font-size: 32px;
   margin-bottom: 12px;
+  display: flex;
+  justify-content: center;
 }
 
 .contact-card h4 {
